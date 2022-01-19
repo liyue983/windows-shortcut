@@ -48,21 +48,21 @@ import os
 shell = client.Dispatch("WScript.Shell")
 
 def ReadShortCut(lnkPath):
-shortcut = shell.CreateShortCut(lnkPath)
-result = {
-"TargetPath": shortcut.TargetPath,
-"WindowStyle": shortcut.WindowStyle,
-"Hotkey": shortcut.Hotkey,
-"IconLocation": shortcut.IconLocation,
-"Description": shortcut.Description,
-"WorkingDirectory": shortcut.WorkingDirectory
-}
-return result
+    shortcut = shell.CreateShortCut(lnkPath)
+    result = {
+    "TargetPath": shortcut.TargetPath,
+    "WindowStyle": shortcut.WindowStyle,
+    "Hotkey": shortcut.Hotkey,
+    "IconLocation": shortcut.IconLocation,
+    "Description": shortcut.Description,
+    "WorkingDirectory": shortcut.WorkingDirectory
+    }
+    return result
 
 def CreateShortCut(lnkPath, TargetPath, WindowStyle=1, Hotkey='', IconLocation=',0', Description='', WorkingDirectory=''):
-lnkPath = os.path.abspath(lnkPath)
-TargetPath = os.path.abspath(TargetPath)
-WorkingDirectory = os.path.abspath(WorkingDirectory)
+    lnkPath = os.path.abspath(lnkPath)
+    TargetPath = os.path.abspath(TargetPath)
+    WorkingDirectory = os.path.abspath(WorkingDirectory)
 
     shortcut = shell.CreateShortCut(lnkPath)
     shortcut.TargetPath = TargetPath
