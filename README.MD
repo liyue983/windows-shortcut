@@ -18,7 +18,7 @@
 
 ## 环境需求
 
-里面用到了`win32com`模块，需安装`pypiwin32`
+里面用到了`win32com`模块，需安装`pypiwin32`或者`pywin32`
 
 ```
 pip install pypiwin32
